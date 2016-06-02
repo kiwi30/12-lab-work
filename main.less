@@ -1,0 +1,79 @@
+@background-color-def: #e0e0e0;
+@background-color-inf: #3b83c0;
+@background-color-sec: #404245;
+@background-color-def-hover: #e8e8e8;
+@background-color-inf-hover: #458ac6;
+@background-color-sec-hover: #1b1c1d;
+@color-333: #333;
+@color-fff: #fff;
+
+
+
+
+@font-xs: 10px;
+@font-def: 14px;
+@font-xl: 18px;
+@linh: 20px;
+@padding-xs: 2px 4px;
+@padding-normal: 6px 12px;
+@padding-xl: 10px 16px;
+
+
+body{
+  margin:0 auto;
+  text-align: center;
+}
+
+
+.btnsize{
+  width: 90px;
+  height:30px;
+  border:2px solid #fff;
+  border-radius: 3px;
+}
+
+
+.btn-theme(@backgr-col, @color) {
+  .btnsize;
+  background-color: @backgr-col;
+  color:@color;
+}
+
+
+
+.btn-default {
+  .btn-theme(@background-color-def, @color-333);
+}
+.btn-info {
+  .btn-theme(@background-color-inf, @color-fff);
+}
+.btn-secondary {
+  .btn-theme(@background-color-sec, @color-fff);
+}
+
+
+
+
+.btn{
+  background-color: #e0e0e0;
+  color: black;
+  line-height: @linh;
+  border:1px solid #fff;
+  border-radius: 5px;
+}
+.btn-size-theme(@font-size,@padding){
+  .btn;
+  font-size: @font-size;
+  padding: @padding;
+
+}
+.btn-xs-size{
+  .btn-size-theme(@font-xs,@padding-xs);
+}
+.btn-default-size{
+  .btn-size-theme(@font-def,@padding-normal);
+
+}
+.btn-xl-size{
+  .btn-size-theme(@font-xl,@padding-xl);
+}
